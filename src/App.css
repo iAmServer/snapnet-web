@@ -1,0 +1,141 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+}
+
+.heading {
+  text-align: end;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  color: #240d57;
+  margin-bottom: 16px;
+}
+
+.heading span {
+  background: linear-gradient(90deg, #8456ec 24.2%, #e87bf8 120.46%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+  color: #4f4f4f;
+  max-width: 520px;
+  margin-bottom: 55px;
+}
+
+button {
+  border: 0;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s;
+  color: #ffffff;
+  background: linear-gradient(90deg, #8456ec 3.25%, #e87bf8 100%);
+  border-radius: 10px;
+  width: 320px;
+  height: 55px;
+  display: block;
+}
+
+button.sm {
+  display: none;
+}
+
+img {
+  width: 440px;
+}
+
+@media (max-width: 810px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item:nth-child(1) {
+    order: 2;
+  }
+
+  .item:nth-child(2) {
+    order: 1;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  button {
+    display: none;
+  }
+
+  button.sm {
+    display: block;
+    width: 300px;
+  }
+
+  img {
+    width: 311px;
+    height: 548.27px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    max-width: 320px;
+    margin-bottom: 36px;
+  }
+
+  img {
+    width: 165.63px;
+    height: 292px;
+    margin: 0 auto;
+  }
+
+  button.sm {
+    width: fit-content;
+    margin-top: 16px;
+  }
+}
